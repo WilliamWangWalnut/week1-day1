@@ -1,3 +1,4 @@
+/* Header */
 header {
     background: url(images/central_park.jpg) 0 -200px no-repeat;
     height: 400px; 
@@ -9,6 +10,8 @@ header {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Navigation*/
 li {
     list-style-type: none;
     display: inline; /* arrange navi horizontally */
@@ -36,13 +39,60 @@ nav{
     text-align: center;
     padding-top: 2px;
 }
-main {
 
+/* Main Content */
+main {
+    padding: 50px; /* top, right, bottom, left    or   use margin*/
 }
-main h1{ /* this selecter ONLY applys to <h1> within <main> */
+main h1 { /* this selecter ONLY applys to <h1> within <main> */
     color: rgb(129,141,179);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Main Content - Table Styling*/
+table {
+    margin-top::35px;
+}
+table, caption, th, td { /* style caption, head & data(cell), tr not used normally*/
+    border: 1px solid #000; /* line thickness, table line style, color */
+}
+th, td {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+caption {
+    text-transform: uppercase;
+    font-weight: bolder;
+    height: 40px;
+    padding-top: 15px;
+    color: #753a30;
+}
+
+/* Main Content - Form */
+label {
+    display: block;
+    margin: 15px 0 0 0; /* top right buttom left "Clock-wise" */
+}
+input {
+    width: 300px;
+    height: 20px;
+}
+input[type="radio"] {
+    width: 25px;
+    height: 15px;
+}
+textarea {
+    width: 300px;
+    height: 130px;
+}
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+
+/* Footer */
 footer {
     height: 40px;
     background-color: rgb(129,141,179);
