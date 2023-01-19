@@ -92,6 +92,11 @@ input[type="submit"] {
     width: 100px;
 }
 
+/* Album */
+main #album #photo img {
+    width: 400px;
+}
+
 /* Footer */
 footer {
     height: 40px;
