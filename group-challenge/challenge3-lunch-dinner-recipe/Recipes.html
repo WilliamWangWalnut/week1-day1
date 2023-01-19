@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Challenge 3: Lunch or Dinner</title>
+    <style>
+        #timeofday {
+            font-size: xx-large;
+            border: solid black 3px;
+            width: 800px;
+        }
+        #recipe {
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Lunch or Dinner -->
+<section id="timeofday">
+    <span id="recipe"></span>
+    <br><br>
+    <span id="steps"></span>
+</section> 
+
+<!-- JavaScript Codes -->
+    <script>
+        //1.Creat a time data function
+        function currentMeal() {
+            //Declare variables
+            var d = new(Date);
+            var hr = d.getHours();//Get current hours
+            var meal;
+            var step;
+        
+            //Dtermin which meal to cook
+            if (hr >= 12 && hr < 18) {
+                meal = "Lunch Recipe:";
+            } else if (hr >= 18 && hr <=23) {
+                meal = "Dinner Recipe";
+            } else {
+                meal = "Your should be at work or at sleep!"
+            }  
+
+            //Steps to cook Lunch or Dinner
+            if (hr >= 12 && hr < 18) {
+                step = "1. Whisk together 6 large eggs and 2 Tbsp half-and-half.⁠\n2. Stir-fry butter, yellow onion, red bell pepper, jalapeño and the egg mixture.\n3. Combine 1 cup grated sharp cheddar cheese and 1 cup grated Monterey Jack cheese.⁠\n4. Fill the quesadillas with prepared ingredients.\n5. Cook and seal the quesadillas.";
+            } else if (hr >= 18 && hr <=23) {
+                step = "1. Prepare burger patty with salt and pepper.\n2. Grill patty on medium heat.\n3. Toast bun while grilling meat.\n4. Prepare toppings.\n5. Assemble ingredients into hamburger when done.";
+            } else {
+                step = "Nothing to eat!"
+            }  
+
+            //Display current local time and time zone on HTML elements
+            document.getElementById("recipe").innerText = meal;
+            document.getElementById("steps").innerText = step;
+            //Run time data function every 1 second
+            setInterval (currentTime, 1000);
+        }
+        //Initial run of time data function
+        currentMeal();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
