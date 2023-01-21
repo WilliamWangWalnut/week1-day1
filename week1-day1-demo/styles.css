@@ -51,7 +51,7 @@ main h1 { /* this selecter ONLY applys to <h1> within <main> */
 
 /* Main Content - Table Styling*/
 table {
-    margin-top::35px;
+    margin-top:35px;
 }
 table, caption, th, td { /* style caption, head & data(cell), tr not used normally*/
     border: 1px solid #000; /* line thickness, table line style, color */
